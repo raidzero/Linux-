@@ -1,0 +1,2 @@
+tab1	tab2	tab3
+expand -t 1 to convert each space to a tab. 
