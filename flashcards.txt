@@ -87,3 +87,31 @@ LIBRARIES - what file contains the library path?::/etc/ld.so.conf
 LIBRARIES - what environment variable contains the library path and can be quickly modified temporarily?::LD_LIBRARY_PATH
 LIBRARIES - what linux utility can you run on an executable to display the shared libraries it needs to run?::ldd
 LIBRARIES - what linux utility do you use to update the library cache?::ldconfig
+SCSI - What devices must be terminated in a SCSI chain?::Devices at the end of the chain
+GENERAL - what utility is a quick way to find program executables and related files like documentation or configuration files?::whereis
+RUNLEVELS - what runlevel is used to shut down the system?:: runlevel 0
+RUNLEVELS - what runlevel is used for single-user mode?::runlevel 1, s or S
+RUNLEVELS - what runlevel does Debian use as a GUI runlevel?::runlevel 2
+RUNLEVELS - what runlevel do most distributions (including Fedora, Mandriva & Red Hat) use for GUI?::runlevel 3
+RUNLEVELS - what is the function of runlevel 4?::Usually undefined
+RUNLEVELS - what runlevel is used by several distributions to auto launch a graphical login manager?::runlevel 5
+RUNLEVELS - what runlevel is used to reboot the syste,?::runlevel 6
+GENERAL - how do you schedule a shutdown to occur in 15 minutes?::shutdown +15 "MESSAGE"
+GENERAL - how do you cancel an impending shutdown operation?::shutdown -c "MESSAGE"
+GENERAL - how do you convert spaces in a file into tabs?::unexpand
+GENERAL - how do you convert tabs in a file to spaces?::expand
+QUOTAS - what entries need to go into /etc/fstab options to enable quota support for a filesystem?::usrquota,grpquota
+QUOTAS - which of these filesystems does not support quotas? ext2, ext3, ext4, reiserfs, jfs, xfs.::ext4
+QUOTAS - how do you edit the quotas for a user?::edquota USERNAME
+QUOTAS - how do you edit the grace period for extending the soft limit of a quota?::edquota -t
+QUOTAS - how do you typically check a system for quota support?::chkconfig quota on
+QUOTAS - how would you verify that quotas are working as expected?::quotacheck
+VI - what prefix to a command do you use in vi to run an external command (ls for example)?:: :!ls
+VI - what command includes the contents of an old file in an existing one?:: :r
+VI - what is the command to open a new file?:: :e FILENAME
+VI - how do you search and replace within a file?:: %s/ORIG/REPLACEMENT/g
+VI - what is the command in command mode to copy 5 lines of text?::5yy
+VI - what is the command in command mode to delete 5 lines?::5dd
+VI - what is the command in command mode to go to the Nth line in a file?::NG
+GENERAL - what command combines two files by matching the contents of specified fields within the files?::join
+GENERAL - what command merges files line by line, separating the lines from each file with tabs?::paste
