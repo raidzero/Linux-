@@ -157,3 +157,11 @@ FILESYSTEMS - what can help reduce the amount of time to recovery from a power o
 FILESYSTEMS - how to check a filesystem for consitency?::fsck
 FILESYSTEMS - how to see the free and used space on your filesystems?::df
 FILESYSTEMS - how do you limit the type of filesystem displayed by df?::-t
+FILESYSTEMS - how do you determine the amount of space on disk a directory is consuming?::du
+FILESYSTEMS - what switch is used to tell mount what type of filesystem to mount?::-t
+FILESYSTEMS - how do you mount a local file as if it were a disk?::mount -o loop 
+FILESYSTEMS - how do you force an unmount operation?::umount -f
+FILESYSTEMS - how do you unmount all mounted filessytems?::umount -a
+FILESYSTEMS - what file do you use to permanently mount filesystems at boot?::/etc/fstab
+HARDWARE - what is the first function of the BIOS?::configures hardware
+HARDWARE - what is the second function of the BIOS?::passes control to the bootloader to boot the system
