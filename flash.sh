@@ -28,7 +28,7 @@ if [ ! -z "$1" ]; then
 		echo "************"
 		echo "*QUESTION $INCREMENT*"
 		echo "************"
-		echo $QUESTION
+		echo $QUESTION | fmt -w 60
 		echo ""
 		echo "Press enter to see the answer..."
 		read key
@@ -49,7 +49,7 @@ clear
 echo "************"
 echo "*QUESTION $RANDLINE*"
 echo "************"
-echo $QUESTION
+echo $QUESTION | fmt -w 60
 echo ""
 echo "Press enter to see the answer..."
 read key
