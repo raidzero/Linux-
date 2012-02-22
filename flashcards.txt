@@ -51,7 +51,7 @@ RPM - how to rebuild the RPM database to fix errors?::rpm --rebuilddb
 RPM - how to tell RPM to install a package using a specified directory as root?::rpm --root DIR
 RPM - how to force installation of a package even if it means overwriting existing files or packages?::rpm --force
 RPM - how to display a series of #'s to indicate the progress of an operation?::-h or --hash
-RPM - what switch is used in conjunction with -h to ensure a uniform nuber of #'s are printed for each package?::-v
+RPM - what switch is used in conjunction with -h to ensure a uniform number of #'s are printed for each package?::-v
 RPM - how to specify that no dependency checking be done?::--nodeps
 RPM - how to check for dependencies, conflicts and other problems without installing the package?::--test
 RPM - how to attempt to override the installation directory of a package?::--prefix PATH
@@ -63,7 +63,7 @@ RPM - how to display the files contained in the package?::-l or --list
 APT - how to update the information in repositories stored in /etc/apt/sources.list?::apt-get update
 APT - how to upgrade all installed packages to the newest version available?::apt-get upgrade
 APT - how to perform any changes in package status (installation, removal, etc) left undone after running dselect?::apt-get deselect-upgrade
-APT - how to upgrade using "smart" conflict resolution to avoid ugrading a package if doing so would break a dependency?::apt-get dist-upgrade
+APT - how to upgrade using "smart" conflict resolution to avoid upgrading a package if doing so would break a dependency?::apt-get dist-upgrade
 APT - how to install a package by package name, obtaining the package from the repositories?::apt-get install
 APT - how to remove a specified package by package name?::apt-get remove
 APT - how to retrieve the newest available source package by package filename using the information from /etc/apt/sources.list?::apt-get source
@@ -78,7 +78,7 @@ APT - how to fake an installation without actually installing anything?::-s or -
 APT - how to automatically answer any prompts affirmatively?::-y or --yes or --assume-yes
 APT - how to compile a source package after retrieving it?::-b or --compile or --build
 APT - how to run apt-get without upgrading any packages?::--no-upgrade
-ALIEN - how to convert a package to debian format?:: alien --to-deb
+ALIEN - how to convert a package to Debian format?:: alien --to-deb
 ALIEN - how to convert a package to RPM format?::alien --to-rpm
 ALIEN - how to convert a package to SLP format?::alien --to-slp
 ALIEN - how to convert a package a TGZ archive?::alien --to-tgz
@@ -95,13 +95,13 @@ RUNLEVELS - what runlevel does Debian use as a GUI runlevel?::runlevel 2
 RUNLEVELS - what runlevel do most distributions (including Fedora, Mandriva & Red Hat) use for GUI?::runlevel 3
 RUNLEVELS - what is the function of runlevel 4?::Usually undefined
 RUNLEVELS - what runlevel is used by several distributions to auto launch a graphical login manager?::runlevel 5
-RUNLEVELS - what runlevel is used to reboot the syste,?::runlevel 6
+RUNLEVELS - what runlevel is used to reboot the system?::runlevel 6
 GENERAL - how do you schedule a shutdown to occur in 15 minutes?::shutdown +15 "MESSAGE"
 GENERAL - how do you cancel an impending shutdown operation?::shutdown -c "MESSAGE"
 GENERAL - how do you convert spaces in a file into tabs?::unexpand
 GENERAL - how do you convert tabs in a file to spaces?::expand
 QUOTAS - what entries need to go into /etc/fstab options to enable quota support for a filesystem?::usrquota,grpquota
-QUOTAS - which of these filesystems does not support quotas? ext2, ext3, ext4, reiserfs, jfs, xfs.::ext4
+QUOTAS - which of these filesystems does not support quotas? ext2, ext3, ext4, Reiserfs, JFS, XFS.::ext4
 QUOTAS - how do you edit the quotas for a user?::edquota USERNAME
 QUOTAS - how do you edit the grace period for extending the soft limit of a quota?::edquota -t
 QUOTAS - how do you typically check a system for quota support?::chkconfig quota on
