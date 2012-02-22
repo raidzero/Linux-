@@ -1,19 +1,19 @@
-Every Linux filesystem traces its roots to which directory?::/ (root)
-Which directory contains files pertaining to the initial boot of the system::/boot
-Which directory contains critical executable files?::/bin
-Which directory contains executable files runnable only by root?::/sbin
-Which directory contains libraries?::/lib
-Which directory hosts the bulk of a linux machines programs and program files?::/usr
-Which directory hosts files that a system administrator installs locally?::/usr/local
-Which directory houses files related to X?::/usr/X11R6
-Which directory is intended for ready-made packages not installed with the OS?::/opt
-Which directory houses all user's personal data?::/home
-Which directory is root's home directory?::/root
-Which directory contains transient files of various types, usually for logs and print spools?::/var
-Which directory is intended for temporary use?::/tmp
-Which directory is intended for temporarily mounting a filessytem?::/mnt
-Which directory houses device files?::/dev
-Which directory houses a virtual filesystem used to provide kernel-provided information?::/proc
+FHS - Every Linux filesystem traces its roots to which directory?::/ (root)
+FHS - Which directory contains files pertaining to the initial boot of the system::/boot
+FHS - Which directory contains critical executable files?::/bin
+FHS - Which directory contains executable files runnable only by root?::/sbin
+FHS - Which directory contains libraries?::/lib
+FHS - Which directory hosts the bulk of a linux machines programs and program files?::/usr
+FHS - Which directory hosts files that a system administrator installs locally?::/usr/local
+FHS - Which directory houses files related to X?::/usr/X11R6
+FHS - Which directory is intended for ready-made packages not installed with the OS?::/opt
+FHS - Which directory houses all user's personal data?::/home
+FHS - Which directory is root's home directory?::/root
+FHS - Which directory contains transient files of various types, usually for logs and print spools?::/var
+FHS - Which directory is intended for temporary use?::/tmp
+FHS - Which directory is intended for temporarily mounting a filessytem?::/mnt
+FHS - Which directory houses device files?::/dev
+FHS - Which directory houses a virtual filesystem used to provide kernel-provided information?::/proc
 DPKG - how to install a package?::dpkg -i or dpkg --install
 DPKG - how to reconfigure an installed package (runs post-install config script)?::dpkg --configure
 DPKG - how to remove a package, leaving config files intact?::dpkg -r or dpkg --remove
@@ -78,3 +78,12 @@ APT - how to fake an installation without actually installing anything?::-s or -
 APT - how to automatically answer any prompts affirmatively?::-y or --yes or --assume-yes
 APT - how to compile a source package after retrieving it?::-b or --compile or --build
 APT - how to run apt-get without upgrading any packages?::--no-upgrade
+ALIEN - how to convert a package to debian format?:: alien --to-deb
+ALIEN - how to convert a package to RPM format?::alien --to-rpm
+ALIEN - how to convert a package to SLP format?::alien --to-slp
+ALIEN - how to convert a package a TGZ archive?::alien --to-tgz
+ALIEN - how to install a package on a system that does not have the package manager installed?::alien --install
+LIBRARIES - what file contains the library path?::/etc/ld.so.conf
+LIBRARIES - what environment variable contains the library path and can be quickly modified temporarily?::LD_LIBRARY_PATH
+LIBRARIES - what linux utility can you run on an executable to display the shared libraries it needs to run?::ldd
+LIBRARIES - what linux utility do you use to update the library cache?::ldconfig
