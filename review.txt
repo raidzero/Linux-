@@ -1,0 +1,13 @@
+join/paste
+expand
+renice
+Package Management
+shared libraries - /etc/ld.so.conf
+mkisofs
+FHS
+SCSI
+whereis
+quotas
+shutdown command
+vi - ex
+runlevels
