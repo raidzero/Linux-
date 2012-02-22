@@ -1,0 +1,62 @@
+Every Linux filesystem traces its roots to which directory?::/ (root)
+Which directory contains files pertaining to the initial boot of the system::/boot
+Which directory contains critical executable files?::/bin
+Which directory contains executable files runnable only by root?::/sbin
+Which directory contains libraries?::/lib
+Which directory hosts the bulk of a linux machines programs and program files?::/usr
+Which directory hosts files that a system administrator installs locally?::/usr/local
+Which directory houses files related to X?::/usr/X11R6
+Which directory is intended for ready-made packages not installed with the OS?::/opt
+Which directory houses all user's personal data?::/home
+Which directory is root's home directory?::/root
+Which directory contains transient files of various types, usually for logs and print spools?::/var
+Which directory is intended for temporary use?::/tmp
+Which directory is intended for temporarily mounting a filessytem?::/mnt
+Which directory houses device files?::/dev
+Which directory houses a virtual filesystem used to provide kernel-provided information?::/proc
+DPKG - how to install a package?::dpkg -i or dpkg --install
+DPKG - how to reconfigure an installed package (runs post-install config script)?::dpkg --configure
+DPKG - how to remove a package, leaving config files intact?::dpkg -r or dpkg --remove
+DPKG - how to remove a package and config files?::dpkg -P or dpkg --purge
+DPKG - how to display information about an installed package?::dpkg -p or dpkg --print-avail
+DPKG - how to display information about an uninstalled package file?::dpkg -I or dpkg --info
+DPKG - how to list all installed packages whose name match a pattern?::dpkg -l PATTERN or dpkg --list PATTERN
+DPKG - how to list all files associated with a package?::dpkg -L or dpkg --listfiles
+DPKG - how to locate package(s) that own the file(s) specified by PATTERN?::dpkg -S PATTERN or dpkg --search PATTERN
+DPKG - How to search for partially installed packages and get suggestions on what to do with them?::dpkg -C or dpkg --audit
+YUM - how to install a package by package name with any dependencies?::yum install
+YUM - how to update a specified package to the latest version? If no packages are given, update all installed packages.::yum update
+YUM - how to check to see whether updates are available or not?::yum check-update
+YUM - how to handle upgrade all obsolete packages?::yum upgrade
+YUM - how to remove a package and dependencies?::yum remove or yum erase
+YUM - how to display information about a package, such as the installed version and its update status?::yum list
+YUM - how to display information about packages that provide a specified program of feature?::yum provides or yum whatprovides
+YUM - how to search package names, summaries, packagers and descriptions for a specified keyword?::yum search
+YUM - how to display information about a package, similar to rpm -qi?::yum info
+YUM - how do you clean the yum cache directory?::yum clean
+YUM - how to enter yum's shell mode?::yum shell
+YUM - how to display packages matching a specified dependency?::yum resolvedep
+YUM - how to install local RPM files, using yum repositories to resolve dependencies?::yum localinstall
+YUM - how to update the system using the specified local RPM files, using yum repositories to resolve dependencies?::yum localupdate
+YUM - how to display dependencies of a specified package?::yum deplist
+RPM - how to install a package as long as the system does not already contain a package by the same name?::rpm -i 
+RPM - how to install a new package or upgrade and existing one?::rpm -U
+RPM - how to upgrade a package only if an earlier version is installed?::rpm -F or rpm --freshen
+RPM - how to query a package to find if it is installed, what files it contains, etc?::rpm -q
+RPM - how to verify a package and check that its files are present and unchanged since installation?::rpm -V or rpm -verify
+RPM - how to uninstall a package?::rpm -e
+RPM - how to build a binary package given source code and config files (moved to rpmbuild as of RPM v4.2)?::rpm -b
+RPM - how to build a binary package given a source RPM (moved to rpmbuild as of RPM v4.2)?::rpm --rebuild
+RPM - how to rebuild the RPM database to fix errors?::rpm --rebuilddb
+RPM - how to tell RPM to install a package using a specified directory as root?::rpm --root DIR
+RPM - how to force installation of a package even if it means overwriting existing files or packages?::rpm --force
+RPM - how to display a series of #'s to indicate the progress of an operation?::-h or --hash
+RPM - what switch is used in conjunction with -h to ensure a uniform nuber of #'s are printed for each package?::-v
+RPM - how to specify that no dependency checking be done?::--nodeps
+RPM - how to check for dependencies, conflicts and other problems without installing the package?::--test
+RPM - how to attempt to override the installation directory of a package?::--prefix PATH
+RPM - how to query or verify all packages?::-a or --all
+RPM - how to query or verify a package that owns a given file?::-f FILE or --file FILE
+RPM - how to display package information, including the package maintainer, etc?::-i (used with -q)
+RPM - how to display the package and files on which a given package depends?::-R or --requires
+RPM - how to display the files contained in the package?::-l or --list
