@@ -87,7 +87,7 @@ LIBRARIES - what file contains the library path?::/etc/ld.so.conf
 LIBRARIES - what environment variable contains the library path and can be quickly modified temporarily?::LD_LIBRARY_PATH
 LIBRARIES - what linux utility can you run on an executable to display the shared libraries it needs to run?::ldd
 LIBRARIES - what linux utility do you use to update the library cache?::ldconfig
-SCSI - What devices must be terminated in a SCSI chain?::Devices at the end of the chain
+HARDWARE - What devices must be terminated in a SCSI chain?::Devices at the end of the chain
 GENERAL - what utility is a quick way to find program executables and related files like documentation or configuration files?::whereis
 RUNLEVELS - what runlevel is used to shut down the system?:: runlevel 0
 RUNLEVELS - what runlevel is used for single-user mode?::runlevel 1, s or S
@@ -115,3 +115,53 @@ VI - what is the command in command mode to delete 5 lines?::5dd
 VI - what is the command in command mode to go to the Nth line in a file?::NG
 GENERAL - what command combines two files by matching the contents of specified fields within the files?::join
 GENERAL - what command merges files line by line, separating the lines from each file with tabs?::paste
+HARDWARE - what has replaced the need for entering CHS drive geometry in BISO?::LBA (logical block addressing)
+HARDWARE - which file contains a list of all I/O addresses in use?::/proc/ioports
+HARDWARE - which file contains a list of all DMA addresses in use?::/proc/dma
+HARDWARE - which file contains a list of all IRQ's are in use?::/proc/interrupts
+HARDWARE - what is the device name for the first serial port?::/dev/ttyS0
+HARDWARE - what is the device name for the first parallel port?::/dev/lp0
+HARDWARE - what is the device name for the first floppy drive?::/dev/fd0
+HARDWARE - what are the three main components in a hard drive?::platters, tracks, sectors
+HARDWARE - what program is a userspace daemon that provides other userspace programs with information about available hardware?::hald
+HARDWARE - what acts as hal but provides further abstraction or hardware info access. It enables processes to communicate with each other as well as register to be notified of events, such as new hardware devices?::Dbus
+HARDWARE - what is responsible for the dynamic creatin of device nodes in /dev?::udev
+HARDWARE - which utility will list all PCI devices in a system?::lspci
+HARDWARE - which switch to lspci will return device ID's instead of manufacture names and device names?::-n
+HARDWARE - which switch to lspci will display a tree showing the relationship between devices?::-t
+HARDWARE - which utility lists the loaded kernel modules?::lsmod
+HARDWARE - which utilities will load kernel modules?::modprobe or insmod
+HARDWARE - which utilities will unload kernel modules?::modprobe -r or rmmod
+HARDWARE - which module insertion program requires a filename of the module to be loaded?::insmod
+HARDWARE - how to force load a module using modprobe?::-f or --force
+HARDWARE - how to list available USB devices on a system?::lsusb
+HARDWARE - what device file is assigned to the first PATA disk drive?::/dev/hda
+HARDWARE - is SCSI a serial or parallel bus?::parallel
+HARDWARE - is SATA a serial or parallel bus?::serial
+HARDWARE - what is the maximum number of primary partitions for a hard drive?::4
+HARDWARE - what is the typical maximum number of partitions on a GPT disk?::128
+HARDWARE - why is it important to never put /etc or /bin on a separate partition?::The system will not be able to mount its filesystems
+HARDWARE - what tool is used to resize an existing partition?::parted or gparted (GUI)
+HARDWARE - what type code is used in fdisk to tell the system the partition is linux swap?::82
+FILESYSTEMS - what filesystem is used as an extension of ISO-9660?::joliet
+FILESYSTEMS - what is the tool used to create a filesystem?::mkfs
+FILESYSTEMS - how do you tell mkfs what type of filesystem to create?::-t FILESYSTEM
+FILESYSTEMS - how do you create swapspace in a file or partition?::mkswap
+FILESYSTEMS - how do you activate that swapspace for use by the system?::swapon
+FILESYSTEMS - how do you obtain detailed technical info about an ext2 or 3 filesystem?::dumpe2fs
+FILESYSTEMS - how do you tune ext filesystem options?::tune2fs
+FILESYSTEMS - how can you interactively debug a filesystem?::debugfs
+FILESYSTEMS - how can you undelete a file given its inode and filename?::debugfs undelete INODE FILENAME
+FILESYSTEMS - how do you get a list of deleted inodes in debugfs?::lsdel or list_deleted_inodes
+FILESYSTEMS - what can help reduce the amount of time to recovery from a power outage by keeping a log of all filesystem activities?::journaling
+FILESYSTEMS - how to check a filesystem for consitency?::fsck
+FILESYSTEMS - how to see the free and used space on your filesystems?::df
+FILESYSTEMS - how do you limit the type of filesystem displayed by df?::-t
+FILESYSTEMS - how do you determine the amount of space on disk a directory is consuming?::du
+FILESYSTEMS - what switch is used to tell mount what type of filesystem to mount?::-t
+FILESYSTEMS - how do you mount a local file as if it were a disk?::mount -o loop 
+FILESYSTEMS - how do you force an unmount operation?::umount -f
+FILESYSTEMS - how do you unmount all mounted filessytems?::umount -a
+FILESYSTEMS - what file do you use to permanently mount filesystems at boot?::/etc/fstab
+HARDWARE - what is the first function of the BIOS?::configures hardware
+HARDWARE - what is the second function of the BIOS?::passes control to the bootloader to boot the system
