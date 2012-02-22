@@ -157,5 +157,3 @@ FILESYSTEMS - what can help reduce the amount of time to recovery from a power o
 FILESYSTEMS - how to check a filesystem for consitency?::fsck
 FILESYSTEMS - how to see the free and used space on your filesystems?::df
 FILESYSTEMS - how do you limit the type of filesystem displayed by df?::-t
-
-
