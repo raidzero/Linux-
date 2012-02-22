@@ -98,7 +98,7 @@ RUNLEVELS - what runlevel is used by several distributions to auto launch a grap
 RUNLEVELS - what runlevel is used to reboot the system?::runlevel 6
 GENERAL - how do you schedule a shutdown to occur in 15 minutes?::shutdown +15 "MESSAGE"
 GENERAL - how do you cancel an impending shutdown operation?::shutdown -c "MESSAGE"
-GENERAL - how do you convert spaces in a file into tabs?::unexpand
+GENERAL - how do you convert multiple spaces in a file into tabs?::unexpand
 GENERAL - how do you convert tabs in a file to spaces?::expand
 QUOTAS - what entries need to go into /etc/fstab options to enable quota support for a filesystem?::usrquota,grpquota
 QUOTAS - which of these filesystems does not support quotas? ext2, ext3, ext4, Reiserfs, JFS, XFS.::ext4
@@ -165,3 +165,21 @@ FILESYSTEMS - how do you unmount all mounted filessytems?::umount -a
 FILESYSTEMS - what file do you use to permanently mount filesystems at boot?::/etc/fstab
 HARDWARE - what is the first function of the BIOS?::configures hardware
 HARDWARE - what is the second function of the BIOS?::passes control to the bootloader to boot the system
+REGEX - what character is used to denote any single character except a newline?::.
+REGEX - what character is used to denote the start of a line?::^
+REGEX - what character is used to denote the end of a line?::$
+REGEX - what words would be matched by the following regular expression: f[ao]g?::fag, fog
+REGEX - what do you use in a regular expression to match a range of characters?::[START-END]
+REGEX - what character will match multiple possible strings?::|
+REGEX - what character do you prefix a character with to escape it?::\ (backslash)
+REGEX - what switch is used to grep a directory recursively for files containing a string?::grep -r
+REGEX - what switch is used to show the filename an expression was found in with grep?::-H
+REDIRECTION - what operator is used to output to a file, creating or overwriting it?::>
+REDIRECTION - what operator is used to append to a file, or create one?::>>
+REDIRECTION - what operator is used to redirect standard error while creating or overwriting a file?::2>
+REDIRECTION - what operator is used to redirect standard error while creating or appending a file?::2>>
+REDIRECTION - what operator redirects bot std output and std error to a new file, creating or overwriting?::&>
+REDIRECTION - what operator redirects the contents of a file to be used as standard input?::<
+REDIRECTION - what operator accepts text on the following lines as std input?::<<
+REDIRECTION - what operator causes the specified file to be used for both std input and output?::<>
+ 
