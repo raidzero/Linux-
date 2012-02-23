@@ -88,7 +88,7 @@ LIBRARIES - what environment variable contains the library path and can be quick
 LIBRARIES - what linux utility can you run on an executable to display the shared libraries it needs to run?::ldd
 LIBRARIES - what linux utility do you use to update the library cache?::ldconfig
 HARDWARE - What devices must be terminated in a SCSI chain?::Devices at the end of the chain
-GENERAL - what utility is a quick way to find program executables and related files like documentation or configuration files?::whereis
+COMMANDS - what utility is a quick way to find program executables and related files like documentation or configuration files?::whereis
 RUNLEVELS - what runlevel is used to shut down the system?:: runlevel 0
 RUNLEVELS - what runlevel is used for single-user mode?::runlevel 1, s or S
 RUNLEVELS - what runlevel does Debian use as a GUI runlevel?::runlevel 2
@@ -98,8 +98,8 @@ RUNLEVELS - what runlevel is used by several distributions to auto launch a grap
 RUNLEVELS - what runlevel is used to reboot the system?::runlevel 6
 GENERAL - how do you schedule a shutdown to occur in 15 minutes?::shutdown +15 "MESSAGE"
 GENERAL - how do you cancel an impending shutdown operation?::shutdown -c "MESSAGE"
-GENERAL - how do you convert multiple spaces in a file into tabs?::unexpand
-GENERAL - how do you convert tabs in a file to spaces?::expand
+COMMANDS - how do you convert multiple spaces in a file into tabs?::unexpand
+COMMANDS - how do you convert tabs in a file to spaces?::expand
 QUOTAS - what entries need to go into /etc/fstab options to enable quota support for a filesystem?::usrquota,grpquota
 QUOTAS - which of these filesystems does not support quotas? ext2, ext3, ext4, Reiserfs, JFS, XFS.::ext4
 QUOTAS - how do you edit the quotas for a user?::edquota USERNAME
@@ -113,8 +113,8 @@ VI - how do you search and replace within a file?:: %s/ORIG/REPLACEMENT/g
 VI - what is the command in command mode to copy 5 lines of text?::5yy
 VI - what is the command in command mode to delete 5 lines?::5dd
 VI - what is the command in command mode to go to the Nth line in a file?::NG
-GENERAL - what command combines two files by matching the contents of specified fields within the files?::join
-GENERAL - what command merges files line by line, separating the lines from each file with tabs?::paste
+COMMANDS - what command combines two files by matching the contents of specified fields within the files?::join
+COMMANDS - what command merges files line by line, separating the lines from each file with tabs?::paste
 HARDWARE - what has replaced the need for entering CHS drive geometry in BISO?::LBA (logical block addressing)
 HARDWARE - which file contains a list of all I/O addresses in use?::/proc/ioports
 HARDWARE - which file contains a list of all DMA addresses in use?::/proc/dma
@@ -182,4 +182,41 @@ REDIRECTION - what operator redirects bot std output and std error to a new file
 REDIRECTION - what operator redirects the contents of a file to be used as standard input?::<
 REDIRECTION - what operator accepts text on the following lines as std input?::<<
 REDIRECTION - what operator causes the specified file to be used for both std input and output?::<>
- 
+COMMANDS - what command is used to concatenate files?::cat
+COMMANDS - what command is used to print a file in octal format?::od
+COMMANDS - how would you sort a file by the third column of data?::sort -k 3
+COMMANDS - what command will separate a file into pieces by lines or bytes?::split
+COMMANDS - what command can change individual characters in standard input?::tr
+COMMANDS - what command removes duplicate lines?::uniq
+COMMANDS - which command can truncate long lines into multiple lines based on a given line width?::fmt
+COMMANDS - which command's sole purpose is numbering lines in files or std input?::nl
+COMMANDS - which command is used to add headers and footers, page breaks, etc to a file to prepare it for printing?::pr
+COMMANDS - which command allows you to view the beginning of a file?::head
+COMMANDS - which command allows you to view the end of a file?::tail
+COMMANDS - which command allows you to read a file on the screen, scrolling one page at a time?::more
+COMMANDS - which command allows you to read a file on the screen, scrolling one line at a time?::less
+COMMANDS - which command can extract a portion of input lines and display then on standard output, by byte, character or field?::cut
+COMMANDS - which command can count words, characters or lines in some input?::wc
+COMMANDS - which command is used to match regular expressions in input?::grep
+COMMANDS - which command can modify the contents of files, sending the result to standard output by default?::sed
+COMMANDS - how can you display the current line number in sed?::=
+COMMANDS - which command can launch an executable with a given priority?::nice
+COMMANDS - which command can change the priority of a given process?::renice
+COMMANDS - which command moves files?::mv
+COMMANDS - which command copies files?::cp
+COMMANDS - which command will display some given text?::echo
+COMMANDS - which command will print the current directory?::pwd
+COMMANDS - which command will change the current directory?::cd
+COMMANDS - which command can time execution time of other commands?::time
+COMMANDS - which command will print the recent history of all other commands entered?::history
+COMMANDS - which command is used to create a directory?::mkdir
+COMMANDS - which command is used to delete files?::rm
+COMMANDS - which command is used to delete empty directories?::rmdir
+COMMANDS - which command is used to create links, wither hard or symbolic, to files?::ln
+COMMANDS - which command will create a blank file or update the timestamp on an existing file?::touch
+COMMANDS - which command will show you the contents of the current, or given, directory?::ls
+SHELL - what are the main bash user-specific bash configuration files?::~/.profile and ~/.bashrc
+SHELL - what are the main bash global bash configuration files?::/etc/profile and /etc/bash.bashrc
+COMMANDS - how can you print all of the current environment variables to the screen?::env
+COMMANDS - what is the command used to view the documentation of a file?::man or info
+COMMANDS - what utility is used to redirect output of a program to the screen and to a file at the same time?::tee
