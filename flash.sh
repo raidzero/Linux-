@@ -10,19 +10,16 @@ $0 sequence reverse to ask in reverse order
 Press q to exit after a question or answer
 USAGECOMMENT
 
-LINES=`cat $FILE | wc -l`
-RANDLINE=`expr $RANDOM % $LINES + 1` #ensure the line is not 0, so add 1
-
-QUESTION=`cat $FILE | sed ''"$RANDLINE"'!d' | awk -F '::' '{print$1}'`  
-ANSWER=`cat $FILE | sed ''"$RANDLINE"'!d' | awk -F '::' '{print$2}'`
-
 function quit() {
 	[ "$1" == 9999 ] && echo "Out of questions!"
 	echo "Hope you learned something. Bye!"
+	[ -e $SORTED_FILE ] && [ ! -z "$SORTED_FILE" ] && rm $SORTED_FILE
 	exit $1
 }
 
-if [ "$1" == "sequence" ]; then
+
+if [ "$1" == "sequence" ] || [ "$1" == "norepeat" ]; then
+	LINES=`cat $FILE | wc -l`
 	if [ "$2" != "reverse" ]; then
 		echo "Sequential mode activated."
 		echo ""
@@ -32,7 +29,15 @@ if [ "$1" == "sequence" ]; then
 		echo ""		
 		INCREMENT=$LINES
 	fi
+	if [ "$1" == "norepeat" ]; then
+	  clear
+	  echo "No repeat mode activated."
+	  SORTED_FILE="$FILE-sorted"	  
+	  cat $FILE | sort -R > $SORTED_FILE
+ 	  FILE=$SORTED_FILE
+	fi
 	
+
 	while [ $INCREMENT -le $LINES ]; do
 	   if [ -z "$2" ]; then   
 			let INCREMENT=$INCREMENT+1
@@ -65,30 +70,37 @@ if [ "$1" == "sequence" ]; then
 	quit 9999	
 fi
 
-[ $RANDLINE -lt 10 ] && STARS="############"
-[ $RANDLINE -ge 10 ] && [ $RANDLINE -le 99 ] && STARS="#############"
-[ $RANDLINE -ge 100 ] && [ $RANDLINE -le 999 ] && STARS="##############"
-echo $STARS
-echo "*QUESTION $RANDLINE*"
-echo $STARS
-echo $QUESTION | fmt -w 60
-echo ""
-echo "Press enter to see the answer..."
-read key
-if [ "$key" != "q" ]; then
-	echo "********"
-	echo "*ANSWER*"
-	echo "********"
-	echo $ANSWER
-	echo ""
-	echo "Press enter to see another question..."
-	read PAUSE
-	clear
-	if [ "$PAUSE" != "q" ]; then
-		./flash.sh
-	else
-		quit 0
-	fi	
-else
-	quit 0
-fi
+LEAVE=0
+while [ $LEAVE -ne 1 ]; do
+  LINES=`cat $FILE | wc -l`
+  RANDLINE=`expr $RANDOM % $LINES + 1` #ensure the line is not 0, so add 1
+
+  QUESTION=`cat $FILE | sed ''"$RANDLINE"'!d' | awk -F '::' '{print$1}'`  
+  ANSWER=`cat $FILE | sed ''"$RANDLINE"'!d' | awk -F '::' '{print$2}'`
+  [ $RANDLINE -lt 10 ] && STARS="############"
+  [ $RANDLINE -ge 10 ] && [ $RANDLINE -le 99 ] && STARS="#############"
+  [ $RANDLINE -ge 100 ] && [ $RANDLINE -le 999 ] && STARS="##############"
+  echo $STARS
+  echo "*QUESTION $RANDLINE*"
+  echo $STARS
+  echo $QUESTION | fmt -w 60
+  echo ""
+  echo "Press enter to see the answer..."
+  read key
+  if [ "$key" != "q" ]; then
+	 echo "********"
+	 echo "*ANSWER*"
+	 echo "********"
+	 echo $ANSWER
+	 echo ""
+	 echo "Press enter to see another question..."
+	 read PAUSE
+	 clear
+	 if [ "$PAUSE" == "q" ]; then
+		 LEAVE=1
+	 fi	
+ else
+    LEAVE=1
+ fi
+ done
+quit 0
