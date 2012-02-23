@@ -4,7 +4,8 @@ FILE="flashcards.txt"
 clear
 
 :<<USAGECOMMENT
-Usage: $0 to ask random questions
+Usage: $0 to ask random questions infinitely
+$0 norepeat to ask all questions in a random order without repeating, and quitting at the end
 $0 sequence to ask from beginning to end
 $0 sequence reverse to ask in reverse order
 Press q to exit after a question or answer
