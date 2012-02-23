@@ -255,3 +255,14 @@ PERMISSIONS - what command will set a file's immutable attribute?::chattr +i FIL
 PERMISSIONS - what command will change a file's attributes?::chattr
 QUOTAS - what command can you use to summarize the quota information about filesystems?::repquota
 COMMANDS - which command can you use touse a local database to find files?::locate or slocate
+COMMANDS - how would you find all files with the read and write bits set?::find DIRECTORY -perm -rw or find DIRECTORY -perm -6
+COMMANDS - which command would you use to find the absolute location of an executable file in your PATH?::which
+COMMANDS - which command is used to quickly determine the type of a command (symlink, alias, file, internal command, etc)?::type
+BOOTLOADERS - what is the name of the main LILO configuration file?::/etc/lilo.conf
+BOOTLOADERS - what is the name of the main grub configuration file?::/boot/grub/menu.lst (sometimes symlinked to /boot/grub/grub.conf)
+BOOTLOADERS - what is the size of the boot sector?::512 bytes
+BOOTLOADERS - what is the size of the MBR?::446 bytes
+BOOTLOADERS - how do you enter the edit mode of grub's main interface?::press E
+COMMANDS - what command will display the entire kernel ring buffer since the last boot?::dmesg
+INIT - what is the main init configurartion file?::/etc/inittab
+COMMANDS - what command can lit runlevel services on some distributions?::chkconfig
