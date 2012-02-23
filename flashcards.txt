@@ -109,13 +109,13 @@ QUOTAS - how would you verify that quotas are working as expected?::quotacheck
 VI - what prefix to a command do you use in vi to run an external command (ls for example)?:: :!ls
 VI - what command includes the contents of an old file in an existing one?:: :r
 VI - what is the command to open a new file?:: :e FILENAME
-VI - how do you search and replace within a file?:: %s/ORIG/REPLACEMENT/g
+VI - how do you search and replace within a file?:: %s/ORIG/REPLACEMENT
 VI - what is the command in command mode to copy 5 lines of text?::5yy
 VI - what is the command in command mode to delete 5 lines?::5dd
 VI - what is the command in command mode to go to the Nth line in a file?::NG
 COMMANDS - what command combines two files by matching the contents of specified fields within the files?::join
 COMMANDS - what command merges files line by line, separating the lines from each file with tabs?::paste
-HARDWARE - what has replaced the need for entering CHS drive geometry in BISO?::LBA (logical block addressing)
+HARDWARE - what has replaced the need for entering CHS drive geometry in BIOS?::LBA (logical block addressing)
 HARDWARE - which file contains a list of all I/O addresses in use?::/proc/ioports
 HARDWARE - which file contains a list of all DMA addresses in use?::/proc/dma
 HARDWARE - which file contains a list of all IRQ's are in use?::/proc/interrupts
@@ -125,9 +125,9 @@ HARDWARE - what is the device name for the first floppy drive?::/dev/fd0
 HARDWARE - what are the three main components in a hard drive?::platters, tracks, sectors
 HARDWARE - what program is a userspace daemon that provides other userspace programs with information about available hardware?::hald
 HARDWARE - what acts as hal but provides further abstraction or hardware info access. It enables processes to communicate with each other as well as register to be notified of events, such as new hardware devices?::Dbus
-HARDWARE - what is responsible for the dynamic creatin of device nodes in /dev?::udev
+HARDWARE - what is responsible for the dynamic creation of device nodes in /dev?::udev
 HARDWARE - which utility will list all PCI devices in a system?::lspci
-HARDWARE - which switch to lspci will return device ID's instead of manufacture names and device names?::-n
+HARDWARE - which switch to lspci will return device ID's instead of manufacture names and device names?:: -n
 HARDWARE - which switch to lspci will display a tree showing the relationship between devices?::-t
 HARDWARE - which utility lists the loaded kernel modules?::lsmod
 HARDWARE - which utilities will load kernel modules?::modprobe or insmod
@@ -138,12 +138,12 @@ HARDWARE - how to list available USB devices on a system?::lsusb
 HARDWARE - what device file is assigned to the first PATA disk drive?::/dev/hda
 HARDWARE - is SCSI a serial or parallel bus?::parallel
 HARDWARE - is SATA a serial or parallel bus?::serial
-HARDWARE - what is the maximum number of primary partitions for a hard drive?::4
+HARDWARE - what is the maximum number of primary partitions for a non-GPT hard drive?::4
 HARDWARE - what is the typical maximum number of partitions on a GPT disk?::128
 HARDWARE - why is it important to never put /etc or /bin on a separate partition?::The system will not be able to mount its filesystems
 HARDWARE - what tool is used to resize an existing partition?::parted or gparted (GUI)
 HARDWARE - what type code is used in fdisk to tell the system the partition is linux swap?::82
-FILESYSTEMS - what filesystem is used as an extension of ISO-9660?::joliet
+FILESYSTEMS - what filesystem is used as an extension to ISO-9660?::joliet
 FILESYSTEMS - what is the tool used to create a filesystem?::mkfs
 FILESYSTEMS - how do you tell mkfs what type of filesystem to create?::-t FILESYSTEM
 FILESYSTEMS - how do you create swapspace in a file or partition?::mkswap
@@ -207,7 +207,7 @@ COMMANDS - which command copies files?::cp
 COMMANDS - which command will display some given text?::echo
 COMMANDS - which command will print the current directory?::pwd
 COMMANDS - which command will change the current directory?::cd
-COMMANDS - which command can time execution time of other commands?::time
+COMMANDS - which command can time the execution time of other commands?::time
 COMMANDS - which command will print the recent history of all other commands entered?::history
 COMMANDS - which command is used to create a directory?::mkdir
 COMMANDS - which command is used to delete files?::rm
@@ -220,3 +220,38 @@ SHELL - what are the main bash global bash configuration files?::/etc/profile an
 COMMANDS - how can you print all of the current environment variables to the screen?::env
 COMMANDS - what is the command used to view the documentation of a file?::man or info
 COMMANDS - what utility is used to redirect output of a program to the screen and to a file at the same time?::tee
+COMMANDS - what tool can be used to run a command on several different arguments?::xargs
+COMMANDS - how to grep while ignoring the case of the pattern?::grep -i 
+SHELL - how to use the output of a program as the input of another?::| (pipes)
+COMMANDS - what command can print the kernel version, OS name or platform type?::uname
+COMMANDS - what command will print the currently running processes to the screen and then exit?::ps
+COMMANDS - which switch to ps causes it to display in tree view, showing the relationship between processes?::ps --forest
+COMMANDS - which program is used to interactively view the system processes and memory information, among other things?::top
+COMMANDS - what command will print a list of suspended or running jobs?::jobs
+COMMANDS - what command will resume a paused job in the background?::bg
+COMMANDS - what command will resume a paused job or move a running job to foreground?::fg
+COMMANDS - what command will kill a process, given its ID?::kill
+COMMANDS - which command will kill all processes that have a given name?::killall
+COMMANDS - how would you a launch a program while not allowing it to exit?::nohup
+COMMANDS - how do you interactively kill all processes matching a given name?::killall -i
+HARDWARE - what BIOS option would you look for to enable a computer to continue booting without a keyboard?::halt on keyboard error
+HARDWARE - where is the sysfs virtual filesystem usually mounted?::/sys
+COMMANDS - how to activate copy-out mode in cpio (to create an archive and copy files into it)?::cpio -o
+COMMANDS - how to activate copy-in mode of cpio (to extract data from an archive)?::cpio -i
+COMMANDS - how to activate copy-pass mode in cpio (to copy a directory tree from one location to another)?::cpio -p or cpio --pass-through
+COMMANDS - how to append data to an existing cpio archive?::cpio -a
+COMMANDS - how would you copy the first 5 bytes of a file into a new file?::dd if=INPUTFILE of=OUTPUTFILE count=1 bs=5
+COMMANDS - what command is used to copy data at the lowest level possible?::dd
+FILESYSTEMS - what command will create an ISO-9660 filesystem?::mkisofs
+PERMISSIONS - what does the octal permission 611 mean?::raed&write by root, execute only by group and world
+COMMANDS - what command will change the owner of a file?::chown
+COMMANDS - what command will change the group of a file?::chgrp
+COMMANDS - how would you recursively change the owner of a directory?::chown -R USER DIRECTORY
+PERMISSIONS - what does the sticky bit look like in rwxrwxrwx notation?::t (in the world execute bit)
+PERMISSIONS - what does the SUID bit look like in rwxrwxrwx notation?::s (in the owner's execute bit)
+PERMISSIONS - how do you set the permissions of a file to write for all in addition to its existing permissions?::chmod a+w FILENAME
+PERMISSIONS - what permissions will a file have by default created by a user with a umask of 022?::755
+PERMISSIONS - what command will set a file's immutable attribute?::chattr +i FILENAME
+PERMISSIONS - what command will change a file's attributes?::chattr
+QUOTAS - what command can you use to summarize the quota information about filesystems?::repquota
+COMMANDS - which command can you use touse a local database to find files?::locate or slocate
