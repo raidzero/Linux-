@@ -60,4 +60,3 @@ RPM - how to query or verify a package that owns a given file?::-f FILE or --fil
 RPM - how to display package information, including the package maintainer, etc?::-i (used with -q)
 RPM - how to display the package and files on which a given package depends?::-R or --requires
 RPM - how to display the files contained in the package?::-l or --list
-TEST - question::answer
