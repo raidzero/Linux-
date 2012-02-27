@@ -34,7 +34,7 @@ if [ "$1" == "sequence" ] || [ "$1" == "norepeat" ]; then
 	  clear
 	  echo "No repeat mode activated."
 	  SORTED_FILE="$FILE-sorted"	  
-	  cat $FILE | sort -R > $SORTED_FILE
+	  cat $FILE | while read f ; do printf "$RANDOM\t%s\n" "$f"; done | sort -n | cut -f2- > $SORTED_FILE
  	  FILE=$SORTED_FILE
 	fi
 	
